@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { debounce } from "debounce";
 
 //Redux
 import { useSelector, useDispatch } from "react-redux";
@@ -22,6 +23,7 @@ export default function Container() {
 
   const updateQuery = (string) => {
     dispatch(setQuery(string))
+    query.length >= 2 && dispatch(fetchResults(query))
   }
 
   const listenInput = (e) => {

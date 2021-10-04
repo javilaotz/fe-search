@@ -7,7 +7,7 @@ import "./styles.scss"
 const Product = ({setStarred, data}) => {
   const generic = data.image ? '' : 'generic';
   const name = data.name,
-        image = data.image ? data.image : config.images.company,
+        image = data.image ? data.image : config.images.product,
         category = data.productCategory;
 
   const border = data.starred ? 'warning' : 'light';

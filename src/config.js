@@ -6,7 +6,8 @@ const config = {
   },
   images: {
     animal: 'https://source.unsplash.com/158x158/?animals',
-    company: 'https://source.unsplash.com/158x158/?company'
+    company: 'https://source.unsplash.com/158x158/?company',
+    product: 'https://source.unsplash.com/158x158/?product'
   }
 }
 
