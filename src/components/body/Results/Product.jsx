@@ -4,13 +4,15 @@ import { SVG } from '../../common'
 
 import "./styles.scss"
 
-const Product = ({data}) => {
+const Product = ({setStarred, data}) => {
   const generic = data.image ? '' : 'generic';
   const name = data.name,
         image = data.image ? data.image : config.images.company,
         category = data.productCategory;
+
+  const border = data.starred ? 'warning' : 'light';
   return (
-    <div className="card border-light mb-3" style={{maxWidth: "10rem"}} key={data.id}>
+    <div className={`card border-${border} mb-3`} style={{maxWidth: "10rem"}} key={data.id} onClick={()=>setStarred(data.id)}>
       <div className="row g-0">
         <img src={image} className={`img-fluid rounded-start card-img ${generic}`} alt={name}/>
         <div className="card-badge"><SVG icon="product" /></div>
