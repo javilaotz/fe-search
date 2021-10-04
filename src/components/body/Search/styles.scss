@@ -1,0 +1,18 @@
+@import "../../../template/_mixins.scss";
+
+.search{
+  &.container{
+    @include sm {
+      padding: 0;
+    }
+    @include md {
+      padding: 79px;
+    }
+    @include lg {
+      padding: 79px;
+    }
+    @include xl {
+      padding: 79px;
+    }
+  }
+}

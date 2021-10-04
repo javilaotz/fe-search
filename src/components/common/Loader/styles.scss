@@ -1,0 +1,22 @@
+@import "../../../template/variables";
+@import "../../../template/mixins";
+
+.loader{
+  padding: 20px 0 20px;
+
+  .caption{
+    font-size: $font-size;
+    color: $font-color;
+  }
+
+  .image{
+    animation:spin 4s linear infinite;
+  }
+}
+
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
